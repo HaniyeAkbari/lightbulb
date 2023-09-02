@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  background-color: #2d2d2d;
+  transition: 0.4s;
+}
+main #lamp {
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+main #lamp > i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 250px;
+  z-index: 400;
+}
+main #lamp > i > * {
+  opacity: 0;
+}
+main #lamp > i > i {
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  font-size: 210px;
+  color: yellow;
+  transform: translate(-50%, -50%);
+  z-index: -200;
+}
+main #lamp > i > svg {
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  fill: yellow;
+  filter: blur(15px);
+  z-index: -100;
+}
+main #lamp > i > .inside {
+  width: 55%;
+  height: 55%;
+  position: absolute;
+  top: 12%;
+  left: 22%;
+  background-color: rgb(255, 255, 0);
+  border-radius: 50%;
+  z-index: -200;
+}
+main #key {
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main #key > .box {
+  width: 50%;
+  height: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(90deg);
+  transform-style: preserve-3d;
+}
+main #key > .box > .off {
+  width: 100px;
+  height: 100px;
+  background-color: black;
+  transform-origin: right;
+  position: relative;
+  left: 1px;
+  transition: 0.4s;
+}
+main #key > .box > .off::after {
+  content: "OFF";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  transform: rotate(-90deg);
+}
+main #key > .box > .on {
+  width: 100px;
+  height: 100px;
+  background-color: #3f0053;
+  transform-origin: left;
+  position: relative;
+  box-shadow: 5px 0 15px black;
+  transform: perspective(200px) rotateY(-30deg);
+  transition: 0.4s;
+}
+main #key > .box > .on::after {
+  content: "ON";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  font-size: 25px;
+  top: 0;
+  left: 0;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(-90deg);
+}/*# sourceMappingURL=style.css.map */
